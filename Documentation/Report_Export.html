@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Report - MiniEngine OS Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #3b82f6;
+            --secondary: #8b5cf6;
+            --background: #ffffff;
+            --foreground: #0f172a;
+            --muted: #64748b;
+            --border: #e2e8f0;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--foreground);
+            background: var(--background);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.05em;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 0.5rem;
+            color: var(--primary);
+        }
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        p {
+            margin-bottom: 1rem;
+        }
+        .members {
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary);
+            margin-bottom: 2rem;
+        }
+        .members h4 {
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            color: var(--muted);
+        }
+        .members ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-weight: 700;
+        }
+        .section {
+            margin-bottom: 3rem;
+        }
+        ul {
+            padding-left: 20px;
+            margin-bottom: 1rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        code {
+            font-family: 'JetBrains Mono', monospace;
+            background: #f1f5f9;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            background: var(--border);
+            margin: 2rem 0;
+        }
+        @media print {
+            body { padding: 0; }
+            .container { max-width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>MiniEngine OS Dashboard</h1>
+            <p style="font-weight: 700; color: var(--muted);">Final Project Report • Senior Capstone • OS/24</p>
+        </header>
+
+        <div class="members">
+            <h4>Project Members</h4>
+            <ul>
+                <li>24F-0027 Abu Bakar</li>
+                <li>24F-0023 Ahmad Hassan</li>
+                <li>24F-0052 Faizan Asghar</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>1. Executive Summary</h2>
+            <p>The <strong>MiniEngine OS Dashboard</strong> is an advanced, full-stack Operating System simulation platform. Transitioning from a console-based architecture to a <strong>Professional Window-Based System (GUI)</strong>, this project demonstrates senior-level proficiency in systems programming, full-stack development, and high-end UI/UX design.</p>
+            <p>The system provides a high-fidelity "Mission Control" center to manage 7 fundamental OS pillars: Process Management, CPU Scheduling, Concurrency, IPC, Deadlock Handling, Memory Management, and Sandbox Isolation.</p>
+        </div>
+
+        <div class="section">
+            <h2>2. Theoretical Framework & Architecture</h2>
+            <p>This project follows a <strong>Hybrid Systems Architecture</strong>:</p>
+            <ul>
+                <li><strong>Core Engine (C)</strong>: Low-level logic handling kernel abstractions using POSIX APIs.</li>
+                <li><strong>Web Dashboard (Next.js)</strong>: A premium "Mission Control" interface built with React, Tailwind CSS, Framer Motion, and the <strong>Plus Jakarta Sans</strong> modern typography.</li>
+                <li><strong>Interconnect</strong>: The GUI provides functional, interactive control over the engine modules, transitioning from "pre-set demos" to a user-driven "real-time simulation."</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>3. The 7 Functional Control Modules</h2>
+            
+            <h3>3.1 Live Process Monitor (Process Matrix)</h3>
+            <p>A visual command center for process lifecycle management. Users can "Spawn" new containers and "Kill" existing ones. Every process features a <strong>functional Pause/Resume</strong> toggle that instantly synchronizes state across the kernel.</p>
+
+            <h3>3.2 CPU Scheduler (Mission Cluster)</h3>
+            <p>A high-fidelity animation tool for scheduling algorithms. Supports FCFS and Round Robin. Containers added in the Process Matrix automatically reflect in the scheduler's "Ready Queue."</p>
+
+            <h3>3.3 Synchronization Lab (Concurrency Bridge)</h3>
+            <p>A visual "playground" for concurrency control. Spawns concurrent threads that compete for a visual Mutex with real-time pulse animations.</p>
+
+            <h3>3.4 IPC Messenger Bridge</h3>
+            <p>Demonstrates secure data exchange between isolated environments using simulated POSIX Pipes in a terminal-inspired chat interface.</p>
+
+            <h3>3.5 Deadlock Safety Controller</h3>
+            <p>A functional implementation of Dijkstra's Banker's Algorithm that analyzes resource allocation matrices to determine system safety (Green Safe-Check / Red Alert).</p>
+
+            <h3>3.6 Memory Heatmap & Page Log</h3>
+            <p>A visual representation of Demand Paging and Frame Management. Users witness FIFO/LRU replacement policies in action with Emerald (Hit) and Rose (Fault) glows.</p>
+
+            <h3>3.7 Sandbox Explorer (OS Isolation)</h3>
+            <p>Demonstrates filesystem security through directory scoping and chroot-like isolation, providing a professional file explorer UI.</p>
+        </div>
+
+        <div class="section">
+            <h2>4. Visual Design & Aesthetic Excellence</h2>
+            <p>The dashboard achieves "Senior Project" quality through a "Mission Control" hero landing page, <strong>Plus Jakarta Sans</strong> typography, and vibrant neon color combinations that differentiate kernel modules.</p>
+        </div>
+
+        <div class="section">
+            <h2>5. Conclusion</h2>
+            <p>The <strong>MiniEngine OS Dashboard</strong> represents the culmination of complex systems theory and modern software engineering. By bridging low-level C logic with a high-end web interface, it provides a powerful, intuitive tool for visualizing and interacting with the core components of an operating system.</p>
+        </div>
+
+        <footer>
+            <hr>
+            <p style="text-align: center; font-size: 0.8rem; color: var(--muted);">© 2026 MiniEngine OS Platform • All Rights Reserved</p>
+        </footer>
+    </div>
+</body>
+</html>
